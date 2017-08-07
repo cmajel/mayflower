@@ -2,6 +2,16 @@
 
 {% set colorClass = pageBanner.color ? "ma__page-banner--" ~ pageBanner.color : '' %}
 
+{% if pageBanner.headerTags.taxonomyTerms %}
+  <div class="ma__page-banner__tags">
+    {% if pageBanner.headerTags.taxonomyTerms %}
+      {% set headerTags = pageBanner.headerTags %}
+      {% include "@molecules/header-tags.twig" %}
+    {% endif %}
+  </div>
+{% endif %}
+
+
 <section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
   {% if pageBanner.size == "columns" %}
     <style>

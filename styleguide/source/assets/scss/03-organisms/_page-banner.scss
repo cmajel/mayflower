@@ -323,4 +323,29 @@ $page-banner-icon-width: $column + $gutter;
       width: 62.12903%; // @include span(8 of 12) was too big
     }
   }
+
+  &__tags {
+    @include ma-container;
+    clear: both;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: -20px;
+    padding-top: 18px;
+
+    .ma__header-tags {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      min-height: 48px;
+      position: relative;
+      top: 1px;
+    }
+
+    .ma__header-tags {
+      flex-grow: 1;
+      margin-bottom: 30px;
+    }
+  }
 }
